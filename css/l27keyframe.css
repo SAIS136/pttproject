@@ -1,0 +1,98 @@
+.main{
+    width: 300px;
+    height: 300px;
+    background-color: silver;
+}
+
+
+
+.boxone{
+    width: 600px;
+    height: 600px;
+    /* background-color: green; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* display: grid;
+    place-items: center; */
+
+    position: relative;
+}
+
+.boxone .div1{
+    width: 300px;
+    height: 300px;
+    background-color:#000;
+    border-radius: 50%;
+    color: #fff;
+
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+
+    z-index: 1;
+}
+
+.boxone .div2{
+    width: 320px;
+    height: 320px;
+    /* background-color: violet; */
+    background: conic-gradient(
+        red,
+        violet 30%,
+        red 0%,
+        blue 70%,
+        red 0%,
+        yellow
+    );
+    border-radius: 50%;
+    color: #fff;
+
+    position: absolute;
+     /* left: 0;
+    top: 0; */
+
+    /* z-index: 2; */
+}
+
+.pointercontainer{
+    width: 20px;
+    height: 200px;
+    /* background-color: gray; */
+
+    position: absolute;
+    top:100px;
+
+    z-index: 3;
+
+    animation-name: myani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    transform-origin: bottom;
+}
+
+.pointercontainer .pointer{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+@keyframes myani{
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+
+}

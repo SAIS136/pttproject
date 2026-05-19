@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        // statements
+            // (i)ternary operator (?)
+            // (ii)if statement
+            // (iii)switch statement
+
+        // => ternary operator (?)
+        // c1 statement c2 ? true : false;
+
+        const x = 100;
+        const y = 200;
+
+        console.log( x > y ? "Yes, it is true" : "No, it is false"); //  No, it is false
+        console.log( x < y ? "Yes, it is true" : "No, it is false"); //  Yes, it is true
+
+        // c1 > c2 ? true : (c1 ==Y) ? true : false;
+        console.log(x == y ? "X is equal to Y": (x > y) ? "X is greater than Y" : "X is less than Y");
+
+
+        const num1 = "200";
+        const num2 = '200';
+
+        // check value
+        console.log("== equal to result = " + (num1 == num2 ? "True" : "False"));
+        // check value & datatype
+        console.log("=== Strict equal to result = " + (num1 === num2 ? "True" : "False"));
+
+
+        // check value
+        console.log("!= not equal to result = " + (num1 != num2 ? "True" : "False"));
+        // check value & datatype
+        console.log("!== Strict not equal to result = " + (num1 !== num2 ? "True" : "False"));
+
+
+        console.log("> greater than result = " + (num1 > num2 ? "True" : "False"));
+        console.log(">= greater than or equal result = " + (num1 >= num2 ? "True" : "False"));
+
+
+        console.log("< greater than result = " + (num1 < num2 ? "True" : "False"));
+        console.log("<= greater than or equal result = " + (num1 <= num2 ? "True" : "False"));
+
+
+
+
+        // => (ii) if statement
+
+        // if(condition){
+        //      code to be execute;
+        // }
+
+        const idx = 30;
+
+        if(idx < 10){
+            console.log('Hello');
+        }
+
+        if(idx < 100){
+            console.log('Hi');
+        }
+
+        // if... else...
+
+        // if(true){
+        //      code to be execute;
+        // }else{
+        //      code to be execute;
+        // }
+
+        if(idx > 100){
+            console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        }
+
+        if(idx == "30"){
+             console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        }
+
+        if(idx === "30"){
+             console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        }
+
+        if(idx != "30"){
+             console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        }
+
+        if(idx !== "30"){
+             console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        }
+
+
+        // => else if()
+
+        // if(true){
+        //      code to be execute;
+        // }else if(condition){
+        //      code to be execute;
+        // }else if(condition){
+        //      code to be execute;
+        // }else{
+        //      code to be execute;
+        // }
+
+
+        const j = 1000;
+        const k = 1000;
+
+        if(j > k){
+            console.log("Yes , j is greater than k");
+        }else if(j === k){
+            console.log("j is equal to k");
+        }else{
+            console.log("No , j is less than k")
+        };
+
+        console.log('I am working');
+
+
+        // Nested Condition
+
+        const passcode = 'hifi123';
+        console.log(passcode.length); // 7
+
+        if(passcode.length >= 5){
+            // console.log("Good Passcode");
+
+            if(passcode.indexOf(' ') === -1){
+                console.log('Valid Passcode');
+            }else{
+                console.log('Passcode length is enough ! but should not contain white spaces')
+            }
+
+        }else{
+            console.log('Passcode must be longer')
+        }
+
+
+
+
+        // => (iii) switch statement
+
+
+        // switch(statement){
+        //     case condition:
+        //         code to be executed;
+        //         break;
+        //     case condition:
+        //         code to be executed;
+        //         break;
+        //     case condition:
+        //         code to be executed;
+        //         break;
+        //     case condition:
+        //         code to be executed;
+        //         break;
+        //     default:
+        //         code to be executed;
+        //         break;
+        // }
+
+
+        const user = 'violet'
+
+        // if(user == 'red'){
+        //     console.log('Wrong , i hate red color');
+        // }else if(user == 'blue'){
+        //     console.log('try again');
+        // }else if(user == 'green'){
+        //     console.log('ha ha wrong again');
+        // }else if(user == 'black'){
+        //     console.log('Yes. i love black color');
+        // }else{
+        //     console.log('try again and again');
+        // }
+
+
+        switch(user){
+            case 'red':
+                console.log('My fav color is not red');
+                break;
+            case 'white':
+                console.log('My fav color is not white');
+                break;
+            case 'green':
+                console.log('I hate green');
+                break;
+            case 'violet':
+                console.log('Correct !! My fav color is violet');
+                break;
+            default:
+                console.log('Try Again');
+                break;
+            }
+
+
+
+            //    0     1      2    3      4    5      6
+            // ['sun','mon','tue','wed','thu','fri','sat']
+
+
+            let getday = new Date().getDay();
+            console.log(getday); // 1
+
+            let today;
+            // console.log(today); // undefined
+
+            switch(getday){
+                case 0:
+                    today = 'Sunday';
+                    break;
+                case 1:
+                    today = 'Monday';
+                    break;
+                case 2:
+                    today = 'Tuesday';
+                    break;
+                case 3:
+                    today = 'Wednesday';
+                    break;
+                case 4:
+                    today = 'Thursday';
+                    break;
+                case 5:
+                    today = 'Friday';
+                    break;
+                // case 6:
+                //     today = 'Saturday';
+                //     break;
+                default:
+                    today = 'Saturday';
+
+            }
+
+            console.log(today); // Saturday
+
+
+            let p = 10;
+            let q = 50;
+            console.log(p); // 10
+            console.log(q); // 50
+
+
+            // p = q;
+            // console.log(p); // 50
+
+            // p = p + q;
+            // console.log(p); // 60
+
+            // p += q;
+            // console.log(p); // 60
+
+            // p -= q;
+            // console.log(p); // 40
+
+            // p *= q;
+            // console.log(p); // 500
+
+             // q /= p;
+            // console.log(q); // 5
+
+             // q %= p;
+            // console.log(q); // 0
+
+
+
+            // Exercise
+
+            const username = prompt('Enter Username');
+            const password = prompt('Enter Password');
+            // console.log(username,password);
+            // console.log(typeof username,typeof password);
+
+
+            // if(username === 'susu' && password === '12345'){
+            //     console.log('Welcome Su Su');
+            // }else{
+            //     console.log('Try Again');
+            // }
+
+
+            if(username === 'susu' || password === '12345'){
+                 console.log('Welcome Su Su');
+             }else{
+                 console.log('Try Again');
+             }
+
+
+
+
+    </script>
+
+</body>
+</html>
+
+<!--
+
+Comparison Operators (9)
+== equal to
+=== equal to
+!= not equal
+!== not equal
+> greater than
+< less than
+>= greater than or equal
+<= less than or equal
+? statement ( ternary operator) -->
+
+<!--
+Assignment Operators (6)
+=
++=
+-=
+*=
+/=
+%= -->
+
+<!--
+
+logical Operators
+
+&& and
+|| or
+! not
+
+-->

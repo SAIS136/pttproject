@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+</head>
+<body>
+
+    <small>Copyright <span id="autoyear"></span> BBC. All rights reserved. The BBC is not responsible for the content of external sites. Read about our approach to external linking.</small>
+
+    <script type="text/javascript">
+
+        let mydate = new Date(); // class object
+
+        console.log(mydate); //Wed May 06 2026 13:42:59 GMT+0630 (Myanmar Time)
+        console.log(typeof mydate); //object
+        console.log(new Date()); //Wed May 06 2026 13:44:11 GMT+0630 (Myanmar Time)
+
+
+        console.log(new Date().getDate()); //6
+
+        let getdate = new Date().getDate();
+        console.log(getdate); //6
+
+        let hour = new Date().getHours();
+        console.log(hour); //13
+
+        let minute = new Date().getMinutes();
+        console.log(minute); // 1
+
+        let second = new Date().getSeconds();
+        console.log(second); //45
+
+        // 1s = 1000 milli second
+        let millisecond = mydate.getMilliseconds();
+        console.log(millisecond); //409
+
+        //1s = 1000ms ( unix OS = 1970 )
+        //1 jan 1970 > uptonow
+        let time = mydate.getTime();
+        console.log(time); // 1778053520921
+
+        let now = Date.now();
+        console.log(now); //1778054675784
+
+
+
+        // array index num 0 to 11
+        //    0     1     2     3     4     5     6     7     8     9     10    11
+        // ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'] length 12
+        let month = mydate.getMonth();
+        console.log(month); // 4
+
+        // 0 to 6
+        //    0     1     2     3     4     5     6
+        // ['sun','mon','tue','wed','thu','fri','sat'] length 7
+        let day = mydate.getDay();
+        console.log(day); //3
+
+
+        let year = mydate.getFullYear();
+        console.log(year); // 2026
+
+        //Coordinate Universal Time -12 +6:30
+        let utcyear = mydate.getUTCFullYear();
+        console.log(utcyear); //2026
+
+
+        // document.getElementById("autoyear").textContent = utcyear;
+        // document.getElementById("autoyear").innerText = utcyear;
+        document.getElementById('autoyear').innerHTML = utcyear;
+
+
+        // m d y h:m:s
+        let birthday = new Date("7-10-2020"); //Fri Jul 10 2020 00:00:00 GMT+0630 (Myanmar Time)
+            birthday = new Date("8-1-2023 11:33:20"); //Tue Aug 01 2023 11:33:20 GMT+0630 (Myanmar Time)
+            birthday = new Date("Aug-2-2023 11:33:20"); //Wed Aug 02 2023 11:33:20 GMT+0630 (Myanmar Time)
+            birthday = new Date("Aug 3 2023 11:33:20"); //Thu Aug 03 2023 11:33:20 GMT+0630 (Myanmar Time)
+            birthday = new Date("july 2 2023 11:33:20"); //Sun Jul 02 2023 11:33:20 GMT+0630 (Myanmar Time)
+            birthday = new Date("5/10/2024 11:33:20"); //Fri May 10 2024 11:33:20 GMT+0630 (Myanmar Time)
+
+
+
+        console.log(birthday);
+        console.log(birthday.getMonth()); //4
+
+
+
+        birthday.setMonth(2); //Sun Mar 10 2024 11:33:20 GMT+0630 (Myanmar Time)
+        birthday.setDate(15); //Fri Mar 15 2024 11:33:20 GMT+0630 (Myanmar Time)
+        birthday.setFullYear(2026); //Sun Mar 15 2026 11:33:20 GMT+0630 (Myanmar Time)
+
+        birthday.setHours(15);
+        birthday.setMinutes(22);
+        birthday.setSeconds(45); //Sun Mar 15 2026 15:22:45 GMT+0630 (Myanmar Time)
+        console.log(birthday);
+
+
+    </script>
+</body>
+</html>

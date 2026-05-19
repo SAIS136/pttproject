@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Form Elements</title>
+    </head>
+    <body>
+        <h3>Form Elements</h3>
+
+        <form action="" method="" enctype="multipart/form-data">
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" class="" placeholder="Enter your first name" minlength="3" maxlength="10" autocomplete="off" value="sai" required autofocus>
+           
+            <br><br>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" class="" placeholder="Enter your last name">
+
+            <br><br>
+
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" class="" min="20" max="70" required placeholder="Enter your age">
+
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="" placeholder="Enter your Email">
+
+            <br><br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="" placeholder="Enter your password">
+
+            <br><br>
+
+            <label>Gender</label>
+            <input type="radio" name="gender" id="genderm" value="1"><label for="genderm">Male</label>
+            <input type="radio" name="gender" id="genderf" value="0"><label for="genderf">Female</label>
+            <input type="radio" name="gender" id="gendero" value="2"><label for="gendero">Other</label>
+
+            <br><br>
+
+            <label>Fruit</label>
+            <input type="radio" name="fruit" id="fruitap" value="1"><label for="genderm">Apple</label>
+            <input type="radio" name="fruit" id="fruitog" value="0" checked><label for="genderf">Orange</label>
+            <input type="radio" name="fruit" id="fruitpp" value="2"><label for="gendero">Pineapple</label>
+
+            <br><br>
+
+            <label>Favourite Color</label>
+            <input type="checkbox" name="favcolor" id="red" value="1" checked><label for="red">Red</label>
+            <input type="checkbox" name="favcolor" id="blue" value="2"><label for="blue">Blue</label>
+            <input type="checkbox" name="favcolor" id="green" value="3" checked><label for="green">Green</label>
+            <input type="checkbox" name="favcolor" id="white" value="4"><label for="white">White</label>
+
+            <br><br>
+
+            <label for="country">Citizen</label>
+            <select name="country" id="country" class="">
+                <option selected disabled>Choose a country</option>
+                <option value="mm">Myanmar</option>
+                <option value="thl">Thailand</option>
+                <option value="sg">Singapore</option>
+                <option value="id">Indoneaia</option>
+            </select>
+
+            <br><br>
+
+            <label for="role">Role</label>
+            <select name="role[]" id="role" class="" multiple>
+                <option value="1">Manager</option>
+                <option value="2">Supervisor</option>
+                <option value="3">Sale</option>
+                <option value="4">Editor</option>
+            </select>
+
+            <br><br>
+
+            <label for="dob">DOB</label>
+            <input type="date" name="dob" id="dob" class="">
+
+            <br><br>
+
+            <label for="bookingtime">Booking Time</label>
+            <input type="time" name="bookingtime" id="bookingtime" class="">
+
+            <br><br>
+
+            <label for="apt">Appointment</label>
+            <input type="datetime-local" name="apt" id="apt" class="">
+
+            <br><br>
+
+            <label for="vol">Volume</label>
+            <input type="range" name="vol" id="vol" class="" min="0" max="100" value="0" step="20">
+
+            <br><br>
+
+            <label for="nrc">NRC</label>
+            <input type="file" name="nrc[]" id="nrc" class="" accept="image/*" capture="user" multiple>
+
+            <label for="vdo">Video</label>
+            <input type="file" name="vdo[]" id="vdo" class="" accept="video/*" capture="enviroment" multiple>
+
+            <br><br>
+
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio" class="" rows="5" cols="100" placeholder="Enter Bio"></textarea>
+
+            <br><br>
+
+            <input type="text" name="lag" id="lag" class="" hidden>
+            <input type="hidden" name="lan" id="lan" class="">
+
+            <br><br>
+
+            <input type="reset" name="reset" id="reset" class="" value="Cancle">
+            <input type="button" name="login" id="login" class="" value="Login">
+            <input type="submit" name="signup" id="signup" class="" value="Signup">
+
+            <button type="reset" name="reset" id="reset" class="">Reset</button>
+            <button type="button" name="register" id="register" class="">Register</button>
+            <button type="submit" name="signin" id="signin" class="">Signin</button>
+        </form>
+
+
+
+    </body>
+</html>
+
+
+<!-- [2,4] = array -->

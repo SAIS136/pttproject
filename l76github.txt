@@ -1,0 +1,83 @@
+
+=> Github
+https://github.com/
+
+=> Git Download
+https://git-scm.com/install/windows
+
+
+=> for linux
+sudo apt update
+sudo apt upgrade
+sudo apt install git
+
+    # check version
+    git       or        git  --version    (git version 2.43.0)
+
+
+    ---------------------------------------------------------------
+
+=>  Git Config
+
+== ONE TIME Config
+
+git config --global user.name "saizawlinphyo"
+git config user.name
+
+git config --global user.email "saizawlinphyo@gmail.com"
+git config user.email
+
+--------------------------------------------------------------------
+
+=> Connect to Github Server (using SSH <Secure Shell>)
+
+== ONE TIME config
+ssh-keygen
+
+=> Get key after generate (for linux)
+method 1
+ls -l ~/.ssh
+cat ~/.ssh/id_rsa.pub
+
+method 2
+cd ~/.ssh
+ls -l
+
+
+=> Github key config
+github profile > Settings >SSh and GPG keys > New SSH key
+Title :
+Key Type : Authentication Key
+Key : your pub keys
+
+
+== Check SSH connection  is successful or not
+ssh -T git@github.com
+
+
+-----------------------------------------------------------------
+
+=> Github ( code save/ upload )
+
+git init
+git remote add origin "your repo link"
+git branch -M main
+
+-------
+
+git status
+git add -A                  git add *           git add .
+git status
+git commit -m "my first project"
+git status
+
+git push -u origin main             ( u mean = upstream)
+
+-------------------------------------------------------------
+
+
+=> Github (Download)
+#clone
+git clone "repo link"
+
+---------------------------------------------------

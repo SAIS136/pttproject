@@ -1,0 +1,58 @@
+/* Variable
+
+(i) System Variable  (system/default property)
+(ii) Custom Variable (custom property)
+
+ */
+
+:root{
+    --or:orange;
+    --re:red;
+    --gn:#008000;
+    --sil:rgb(86, 82, 82);
+    --gdc:linear-gradient(green,silver);
+    --wth:100px;
+}
+
+
+.div1{ /*Block*/
+    /*local area */
+    --bu:blue;
+    width: var(--wth);
+    height: var(--wth);
+    background-color: var(--or);
+
+    float: left;
+}
+
+.div2{
+    width: 200px;
+    height: 200px;
+    background-color: var(--re);
+    
+    float: left;
+}
+
+.div3{
+    width: 300px;
+    height: 300px;
+    background-color: var(--gn);
+    
+    float: left;
+}
+
+.div4{
+    width: 400px;
+    height: 400px;
+    background-color: var(--sil);
+
+    float: left;
+}
+
+.div5{
+    width: 500px;
+    height: 500px;
+    background: var(--gdc);
+
+    float: left;
+}

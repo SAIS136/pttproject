@@ -1,0 +1,46 @@
+.textalign{
+    /* text-align: left;
+    text-align: right;
+    text-align: center; */
+    text-align: justify;
+}
+
+.textdecoration{
+    /* text-decoration: underline; */
+    /* text-decoration: line-through; */
+    text-decoration: overline;
+}
+
+a{
+    text-decoration: none;
+}
+
+.textline{
+    /* letter-spacing: 2px;
+    line-height: 20px; */
+    /* line-height: 2; */
+    line-height: 200%;
+}
+
+.textshadow{
+    /* shorthand */
+    /* h v b c */
+    /* hoz vtl blur color */
+
+    /* text-shadow: 50px 0 3px red; */
+    /* text-shadow: -50px 0 3px red; */
+
+    /* text-shadow: 5px 0 3px red; */
+    /* text-shadow: -5px 0 3px red; */
+
+     /* text-shadow: 5px 5px 3px red; */
+    /* text-shadow: -5px -5px 3px red; */
+
+     /* text-shadow: 5px 5px 3px #DB1212; */
+    text-shadow: -5px -5px 3px rgba(66, 135, 245, 1);
+
+    /* text: shadow -5px -5px 3px hsl(350°, 100%, 55%); */
+
+
+    
+}

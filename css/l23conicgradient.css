@@ -1,0 +1,46 @@
+.div1,.div2,.div3,.div4,.div5,.div6{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.div1{
+    background: conic-gradient(red,orange,green,pink);
+}
+
+.div2{
+    background: conic-gradient(
+        #da0d0d,
+        #fda503,
+        #019501,
+        #f4c1ca);
+}
+
+.div3{
+    background: conic-gradient(
+        hsl(0, 89%, 45%),
+        hsl(39, 98%, 50%),
+        hsl(120, 99%, 29%),
+        hsl(349, 70%, 86%));
+}
+
+.div4{
+    background: conic-gradient(
+        rgb(218, 13, 13),
+        rgb(253, 165, 3),
+        rgb(1, 149, 1),
+        rgb(244, 193, 202));
+}
+
+.div5{
+    /* background: conic-gradient(
+        red 40%,
+        green 0% 50%,
+        blue 0% 80%,
+        yellow 0% 100%); */
+
+        background: conic-gradient(
+        red 33%,
+        green 0% 66%,
+        blue 0% );
+}

@@ -1,0 +1,28 @@
+/* Single Selector */
+/* Element Selector */
+
+h3{
+    color: blue;
+}
+
+/* Group Selector (,) */
+
+h4,h5,h6{
+    color: steelblue;
+}
+
+/* id selector */
+#myself{
+    color: red;
+}
+#family,#country,#thi,#indo{
+    color: yellow;
+    font-size: 30px;
+}
+
+.phone{
+    color: brown;
+}
+.fontlg{
+    font-size: 30px;
+}

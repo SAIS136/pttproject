@@ -1,0 +1,164 @@
+Website
+
+Static Website (only reaad & look, no user input & action)
+Dynamic Website (user input)
+
+Web Deveploer
+    Frontend Deveploer
+    Backend Deveploer
+    Database
+
+.html
+
+tag
+elements
+
+=> HTML (HyperText Markup Language V5)
+
+=> comments
+    (i) single line comments <!--- note --->
+    (ii) multi line comments <!---
+    
+                    note
+    
+     --->
+Shortcut    Ctrl+/
+
+
+
+Self-closing tag
+
+<br/> = Linebreak tag
+<hr/> = Horizontal ruler
+
+<b></b> = bold text
+
+<u></u> = underline
+
+<i></i> = italic
+
+Elements
+    (i) Block Element
+    (ii) Inline Element
+
+Standalone Attribute
+    (i)checked
+    (ii)autofocus
+    (iii)readonly
+    (iv)disabled
+    (v)selected
+    (vi)multiple
+    (vii)hidden
+    (viii)required
+    (ix)controls
+    (x)loop
+
+
+HTML
+
+    tag
+    attributes
+    value
+
+attribute="value" 
+
+=> For phone, tablet devices (this tag makes your reponsive and mobile - friendly)
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+name="viewport" = the visible area of the web page on a device screen
+
+width=device-width 
+    this make the width of the page match the screen's width (like the width of the phone or tablet)
+
+initial-scale=1.0
+    initial zoom level when the page first loads.
+    1.0 means no zoom - it shows the page at 100% scale
+
+
+----------------------------------------------------------
+
+=> CSS (Cascading Style Sheet V3)
+
+CSS integrate HTML
+
+(i) internal Style  (in HTML file)
+(ii) inlne style (in HTML file)
+(iii) External style (CSS file)
+
+CSS
+
+    properties
+    values
+
+
+selector {
+    property:value;
+}
+
+=> comments
+    (i) single line comments /* note */
+    (ii) multi line comments /*
+    
+                    note
+    
+     */
+Shortcut    Ctrl+/
+
+
+Properties
+    color
+    font-size
+
+
+[] array
+    rgba(r,g,b,a) function fuctionname(parameter,parameter)
+
+    background-color    solid color
+    background          solid color     gradientcolor   image
+    background-image                    gradientcolor   image
+
+
+
+----------------------------------------------------------
+
+=> Javascript
+
+=> Integrate WIth HTML
+
+Internal
+Inline
+External
+
+
+=> Data Type
+
+string  "" '' ``
+number
+boolean true=1 false=0
+
++sign
+number+number = calculate
+string+number = concat
+boolean+number = calculate
+string+boolean = concat
+
+
+=> Variable Name
+
+(We can use letter,number,_,$)
+const var let
+
+let firstname = "Aung Aung";  // recommend to use
+let FirstName = "Aung Aung";
+let first_name = "Aung Aung";
+let $firstname = "Aung Aung";
+let name1 = "Aung Aung"; // recommend to use
+
+
+(We can't use)
+
+let first name
+let first-name
+let @firstname
+let 2name

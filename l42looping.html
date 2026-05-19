@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+
+        const name = 'aung aung';
+        console.log(name);
+
+                     // 0      1       2      3
+        const arrs = ['red','green','blue','white'];
+        console.log(arrs);
+        console.log(arrs[0]);
+        console.log(arrs[1]);
+        console.log(arrs[2]);
+        console.log(arrs[3]);
+        console.log(arrs[4]); // undefined
+
+
+        // => 1. for loop
+        // for(statement1;statement2;statement3){
+        //         code to executed
+        // }
+
+
+        for(var i = 0; i < 5; i++ ){
+            console.log(i); // 0 1 2 3 4
+        }
+
+        console.log('Hello Sir');
+        console.log('i outside value is = ',i); // i outside value is =  5
+
+        let j = 10;
+
+        for(j;j <= 20;j++){
+            console.log(j); // 10 to 20
+        }
+
+        console.log('j outside value is =',j); //21
+
+
+        // error value = 0 / error
+        // for(const p=0; p < 3;p++){
+        //     console.log(p);
+        // }
+
+
+        for(var k = 0; k <= 10;k++){
+            if(k === 5){
+                // console.log("5 is my fav number.")
+                // console.log(k,' is my fav number.')
+                // console.log(k+' is my fav number.')
+                console.log(`${k} is my fav number.`)
+            }
+
+            console.log('k value is = ',k); // 0 to 10
+        }
+
+        console.log('k outside value is = ',k); //11
+
+
+        // break
+
+        for(var p=0; p < 10; p++){
+
+            // console.log(p); // 0 to 9
+            if(p === 2){
+                console.log(p + ' is my fav number');
+                break; // operation end
+            }
+
+            console.log(p); // 0 to 9
+
+        }
+
+        console.log('p outside value is = ',p); //2
+
+
+        // continue
+
+        for(var q = 0; q < 10; q++){
+
+            // console.log(q); // 0 to 9
+            if(q === 2){
+                console.log(q + ' is my fav number');
+                continue;
+            }
+
+            console.log(q); // 0 to 9
+
+        }
+
+        console.log('p outside value is = ',q); //2
+
+
+        for(var s = 10; s > 0; s--){
+            console.log(s); // 10 to 1
+        }
+
+        console.log('s outside value is = ',s); // 0
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        const arrcolors = ['red','green','blue','white','black','pink']
+        console.log(arrcolors);
+        console.log(typeof arrcolors); // object
+        console.log(arrcolors.length); // 6
+        console.log(arrcolors[3]); // white
+
+
+        // => Array.isArray(value) , return boolean
+        const name = 'Hsu Hsu';
+        console.log(typeof name); // string
+        console.log(Array.isArray(name)); // false
+        console.log(Array.isArray(arrcolors)); // true
+
+
+        // => flat(depth) , default 1
+        let nestarrs1 = [1,2,[3,4],5];
+        console.log(nestarrs1.flat()); // (5) [1, 2, 3, 4, 5]
+        console.log(nestarrs1.flat(1)); // (5) [1, 2, 3, 4, 5]
+
+
+        let nestarrs2 = [1,2,[3,[4,5]]];
+        console.log(nestarrs2.flat()); // (4) [1, 2, 3, Array(2)]
+        console.log(nestarrs2.flat(1)); // [1, 2, 3, Array(2)]
+        console.log(nestarrs2.flat(2)); // [1, 2, 3, 4, 5]
+        console.log(nestarrs2.flat(Infinity)); // [1, 2, 3, 4, 5]
+
+
+        // => indexOf(value)
+        const arrcolours = ['red','green','blue','black','blue','green','red'];
+        console.log(arrcolors.indexOf('black')); // 3
+        console.log(arrcolors.indexOf('Black')); // -1
+        console.log(arrcolors.indexOf('green')); // 1
+
+
+        // => lastIndexOf(value)
+        console.log(arrcolors.lastIndexOf('black')); // 3
+        console.log(arrcolors.lastIndexOf('Black')); // -1
+        console.log(arrcolors.lastIndexOf('green')); // 5
+
+
+        // => join(delimiter)
+        const arrpaints = ['red','green','blue','white','black','pink'];
+        console.log(String(arrpaints)); // red,green,blue,white,black,pink
+        console.log(arrpaints.toString()); // red,green,blue,white,black,pink
+        console.log(arrpaints.join()); // red,green,blue,white,black,pink
+        console.log(arrpaints.join('')); // redgreenbluewhiteblackpink
+        console.log(arrpaints.join(' ')); // red green blue white black pink
+        console.log(arrpaints.join('-')); // red-green-blue-white-black-pink
+
+
+        const candies = ['red','green','blue','white','black'];
+            candies[5] = 'pink';
+            candies[1] = 'skyblue';
+
+        console.log(candies); // (6) ['red', 'skyblue', 'blue', 'white', 'black', 'pink']
+        console.log(candies.length); // 6
+
+
+        // => push(value); Note:: Add new value to array (add on the end)
+
+        candies.push('orange');
+        candies.push('gold');
+        candies.push('violet','gray');
+
+        console.log(candies); // (10) ['red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold', 'violet', 'gray']
+        console.log(candies.length); // 10
+
+        // => unshift(value); Note:: Add new value to array (add on the front)
+
+        candies.unshift('tomato');
+        candies.unshift('green');
+        candies.unshift('silver','steelblue');
+        console.log(candies); // (14) ['silver', 'steelblue', 'green', 'tomato', 'red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold', 'violet', 'gray']
+        console.log(candies.length); // 14
+
+
+        // => shift(); Note:: remove value and index (take off from the front)
+
+        candies.shift();
+        candies.shift();
+        console.log(candies); // ['green', 'tomato', 'red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold', 'violet', 'gray']
+        console.log(candies.length); // 12
+
+        // => pop(); Note:: remove value and index (take off from the end)
+
+        candies.pop();
+        candies.pop();
+        console.log(candies); // (10) ['green', 'tomato', 'red', 'skyblue', 'blue', 'white', 'black', 'pink', 'orange', 'gold']
+        console.log(candies.length); // 10
+
+        // => delete (Removed only value)
+        delete candies[1];
+        delete candies[5];
+
+        console.log(candies); // (10) ['green', empty, 'red', 'skyblue', 'blue', empty, 'black', 'pink', 'orange', 'gold']
+        console.log(candies.length); // 10
+        console.log(candies[1]); // undefined
+
+
+        // => slice(index start,index end) start to end (not exclusive) , note :: slice(index start,length end)
+
+        const arrnums = [100,200,300,400,500,600,700];
+        console.log(arrnums.slice(0,5)); // (5) [100, 200, 300, 400, 500]
+        console.log(arrnums.slice(1,5)); // (4) [200, 300, 400, 500]
+        console.log(arrnums.slice(1,4)); // (3) [200, 300, 400]
+
+
+        // => concat()
+
+        const arrboys = ['aung aung','maung maung','tun tun','kyaw kyaw'];
+        const arrgirls = ['hsu hsu','nu nu','yu yu','lue lue','wai wai'];
+        console.log(arrboys+arrgirls); // aung aung,maung maung,tun tun,kyaw kyawhsu hsu,nu nu,yu yu,lue lue,wai wai
+        console.log(arrboys.concat(arrgirls)); // (9) ['aung aung', 'maung maung', 'tun tun', 'kyaw kyaw', 'hsu hsu', 'nu nu', 'yu yu', 'lue lue', 'wai wai']
+        console.log(arrgirls.concat(arrboys)); // (9) ['hsu hsu', 'nu nu', 'yu yu', 'lue lue', 'wai wai', 'aung aung', 'maung maung', 'tun tun', 'kyaw kyaw']
+
+
+        // => sort() a to z
+        const combinearrs = arrboys.concat(arrgirls);
+        console.log(combinearrs); // (9) ['aung aung', 'maung maung', 'tun tun', 'kyaw kyaw', 'hsu hsu', 'nu nu', 'yu yu', 'lue lue', 'wai wai']
+        console.log(combinearrs[0]); // aung aung
+        console.log(combinearrs[4]); // hsu hsu
+
+        console.log(combinearrs.sort()); //(9) ['aung aung', 'hsu hsu', 'kyaw kyaw', 'lue lue', 'maung maung', 'nu nu', 'tun tun', 'wai wai', 'yu yu']
+        console.log(combinearrs[0]); // aung aung
+        console.log(combinearrs[4]); // maung maung
+
+
+        // => reverse() ; Note::reverse() can't set z to a. It's just reverse
+        console.log(combinearrs.reverse()); // (9) ['yu yu', 'wai wai', 'tun tun', 'nu nu', 'maung maung', 'lue lue', 'kyaw kyaw', 'hsu hsu', 'aung aung']
+
+
+
+    </script>
+
+</body>
+</html>
