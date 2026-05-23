@@ -73,6 +73,7 @@ git status
 
 git push -u origin main             ( u mean = upstream)
 
+rm -f .git/index.lock (use when index lock )
 -------------------------------------------------------------
 
 
