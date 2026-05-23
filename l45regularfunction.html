@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Function</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        // (A) Default Function | System Function
+        // (B) User Define Function
+
+                    // (1) Regular Function
+                    //     (i) Manual Function
+                    //     (ii) Parameter Function
+                    //             (a) Single Parameter Function
+                    //             (b) Multi Parameter Function
+
+
+                    // (2) Arrow Function
+                    //     (i) Manual Function
+                    //     (ii) Parameter Function
+                    //             (a) Single Parameter Function
+                    //             (b) Multi Parameter Function
+
+                    // (3) Generator Function
+
+        // function name(){
+        //     code to be executes (i) print or (ii) return
+        // }
+
+        // name(); function invoke / function recall
+
+
+
+
+        // (i) Manual Function\
+
+        function  greet(){
+            console.log('Hello Myanmar');
+            console.log('Hello Thailand');
+            console.log('Hello Yangon');
+        }
+
+        greet();
+        greet();
+        greet();
+
+
+
+        hello(); // Hello Bago
+
+        function hello(){
+            console.log('Hello Yangon');
+        }
+
+        hello(); // Hello Bago
+
+
+        function hello(){
+            console.log('Hello Bago');
+        }
+
+        hello(); // Hello Bago
+
+
+
+        function funone(){
+            console.log('i am function one');
+        }
+
+        function funtwo(){
+            funone();
+            console.log('i am function two');
+            funone();
+        }
+
+        function funthree(){
+            funtwo();
+            funone();
+        }
+
+        funthree();
+
+
+// -------------------------------------------------
+
+
+        // RETURN
+
+        function funfour(){
+            console.log(4);
+        }
+
+        function funfive(){
+            console.log(5);
+        }
+
+        funfour(); // 4
+        funfive(); // 5
+
+        function funsix(){
+            const num4 = funfour();
+            const num5 = funfive();
+
+            // console.log(num4); // undefined
+            // console.log(num5); // undefined
+
+            const total = num4+num5;
+            console.log(total); // NaN
+        }
+
+        funsix();
+
+
+        function funseven(){
+
+            // return 7; // 7
+
+            // return 7,8,9; // 9
+
+            // return 7; // 7
+            // return 8;
+            // return 9;
+
+            // return 7; // 7
+            // console.log('i am seven');
+
+            // const result = 10+2*6/100+2000-120%10;
+            // return 'hee hee'; // hee hee
+
+
+            const p = 50;
+            const q = 100;
+
+            // const result = p+q;
+            // return result; // 150
+
+            // return const result = p+q; // error
+
+
+            if(p > q){
+                return true;
+            }else{
+                return false; // false
+            }
+        }
+
+        console.log(funseven());
+
+
+        function funeight(){
+
+            // => dos
+
+            // const num8 = 800;
+            // return num8; // 800
+
+            // let num8;
+            // return num8 = 8000; // 8000
+
+            // => don'ts
+
+            // return let num8; // error
+            // return let num8 = 8000; // error
+
+
+            const msg1 = 'Hi';
+            const msg2 = 'nay kg lr ?';
+            const msg3 = 'sarr pee pe lr ?';
+            const msg4 = 'mee lar lr ?';
+
+            return 'block'; // block
+
+        }
+
+        console.log(funeight());
+
+
+
+        function funnine(){
+            return 90;
+        }
+
+        function funten(){
+            const x = 100;
+            return x;
+        }
+
+        console.log(funnine()); // 90
+        console.log(funten()); // 100
+
+        function funeleven(){
+            const num1 = funnine();
+            const num2 = funten();
+
+            // console.log(num1); // 90
+            // console.log(num2); // 100
+
+            const total = num1+num2;
+            console.log(total); // 190
+        }
+
+        funeleven();
+
+
+// -------------------------------------------------
+         // (ii) Parameter Function
+                // (a) Single Parameter Function
+
+
+            function myfun1(city){
+                // console.log('Hello '+city);
+                console.log(`Hello ${city}`);
+            }
+
+            myfun1(); // Hello undefined
+            myfun1('Yangon'); // Hello Yangon
+            myfun1('Mandalay'); // Hello Mandalay
+            myfun1('Bago','Mawlamyine'); // Hello Bago
+            myfun1(500); // Hello 500
+
+
+            // Default Parameter
+
+            function myfun2(country='Indonesia'){
+                console.log(`Hello ${country}`);
+            }
+
+
+            myfun2(); // Hello Indonesia
+            myfun2('Myanmar'); // Hello Myanmar
+            myfun2('Thailand'); // Hello Thailand
+            myfun2(); // Hello Indonesia
+
+// ------------------------------------------------------------------
+
+
+            // (ii) Parameter Function
+                // (b) Multi Parameter Function
+
+            function multifun1(x,y,z){
+                console.log(`X value is ${x} , Y value is ${y} , Z value is ${z}`);
+            }
+
+            multifun1(); // X value is undefined , Y value is undefined , Z value is undefined
+            multifun1(100); // X value is 100 , Y value is undefined , Z value is undefined
+            multifun1(100,200); // X value is 100 , Y value is 200 , Z value is undefined
+            multifun1(100,200,300); // X value is 100 , Y value is 200 , Z value is 300
+            multifun1(100,200,300,400,500); // X value is 100 , Y value is 200 , Z value is 300
+            // multifun1(100,,300); // error
+
+
+
+             function multifun2(x=1,y=2,z=3){
+                console.log(`X value is ${x} , Y value is ${y} , Z value is ${z}`);
+            }
+
+            multifun2(); // X value is 1 , Y value is 2 , Z value is 3
+            multifun2(10); // X value is 10 , Y value is 2 , Z value is 3
+            multifun2(10,20); // X value is 10 , Y value is 20 , Z value is 3
+            multifun2(10,20,30); // X value is 10 , Y value is 20 , Z value is 30
+            multifun2(10,20,30,40,50); // X value is 10 , Y value is 20 , Z value is 30
+            // multifun2(10,,30); // error
+
+
+            function multifun3(x=1,y=2,z=3){
+                const result = x+y+z;
+                return result;
+            }
+
+
+            console.log(multifun3()); // 6
+            console.log(multifun3(10)); // 15
+            console.log(multifun3(10,20)); // 33
+            console.log(multifun3(10,20,30)); // 60
+
+// ------------------------------------------------------------------
+
+
+            // Nameless Function
+
+            const infofun = function (name,color){
+                console.log(`My name is ${name}, I love ${color} colour`);
+            }
+
+            infofun('Sai Sai','Black'); // My name is Sai Sai, I love Black colour
+
+
+    </script>
+
+</body>
+</html>
+
+
